@@ -1,11 +1,8 @@
 'use strict';
 
-const path = require('path');
-const fileName = path.basename(__filename);
-const color = '\x1b[1;33m';
-const colorEnd = '\x1b[0m';
+const log = require('../../../../test/log');
 
-console.log(color + 'start: ' + fileName + colorEnd);
+log('start: ', __filename);
 
 const assert = require('assert').strict;
 const LinkedListNode = require('../LinkedListNode');
@@ -13,16 +10,16 @@ const LinkedListNode = require('../LinkedListNode');
 {
   const linkedListNode = new LinkedListNode('string');
   assert(linkedListNode);
-  assert(linkedListNode.value, 'string');
-  assert(linkedListNode.next === null, true);
+  assert.equal(linkedListNode.value, 'string');
+  assert.equal(linkedListNode.next, null);
 }
 
 {
   const linkedListNode = new LinkedListNode({ key: 'key', value: 'value' });
   assert(linkedListNode);
-  assert(linkedListNode.value.key, 'key');
-  assert(linkedListNode.value.value, 'value');
-  assert(linkedListNode.next === null, true);
+  assert.equal(linkedListNode.value.key, 'key');
+  assert.equal(linkedListNode.value.value, 'value');
+  assert.equal(linkedListNode.next, null);
 }
 
 {
@@ -32,24 +29,24 @@ const LinkedListNode = require('../LinkedListNode');
     nextNode,
   );
   assert(linkedListNode);
-  assert(linkedListNode.value.key, 'key');
-  assert(linkedListNode.value.value, 'value');
-  assert(linkedListNode.next, nextNode);
+  assert.equal(linkedListNode.value.key, 'key');
+  assert.equal(linkedListNode.value.value, 'value');
+  assert.equal(linkedListNode.next, nextNode);
 }
 
 {
   const linkedListNode = new LinkedListNode(1);
-  assert(typeof linkedListNode.toString, 'function');
-  assert(linkedListNode.toString(), '1');
+  assert.equal(typeof linkedListNode.toString, 'function');
+  assert.equal(linkedListNode.toString(), '1');
 }
 
 {
   const linkedListNode = new LinkedListNode({ key: 'key', value: 'value' });
-  assert(typeof linkedListNode.toString, 'function');
-  assert(
+  assert.equal(typeof linkedListNode.toString, 'function');
+  assert.equal(
     linkedListNode.toString(),
     JSON.stringify({ key: 'key', value: 'value' }),
   );
 }
 
-console.log(color + 'finish: ' + fileName + colorEnd);
+log('end: ', __filename);

@@ -1,15 +1,5 @@
 'use strict';
 
-// @ts-check
-
-/**
- * Student Name
- * @type {string}
- */
-const studentName = 100;
-
-console.log(studentName);
-
 const LinkedListNode = require('./LinkedListNode');
 const Compare = require('../../util/Compare');
 
@@ -87,6 +77,8 @@ class LinkedList extends Compare {
    * @return {LinkedList}
    */
   deleteTail() {
+    if (!this.head) throw new Error('LinkedList is Empty');
+
     if (this.head === this.tail) return this._reset();
 
     let currentNode = this.head;
@@ -108,7 +100,7 @@ class LinkedList extends Compare {
    * @return {LinkedList}
    */
   deleteHead() {
-    if (!this.head) throw new Error('LinkedList is empty');
+    if (!this.head) throw new Error('LinkedList is Empty');
 
     if (!this.head.next) return this._reset();
 
