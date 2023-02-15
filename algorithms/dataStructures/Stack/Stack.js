@@ -1,3 +1,5 @@
+'use strict';
+
 class Stack {
   constructor() {
     this.last = null;
@@ -16,6 +18,5 @@ class Stack {
     return element.item;
   }
 }
-
 
 module.exports = Stack;

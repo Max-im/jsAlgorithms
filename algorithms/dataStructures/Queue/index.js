@@ -1,3 +1,5 @@
+'use strict';
+
 const Queue = require('./Queue');
 
 // Usage

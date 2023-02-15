@@ -1,12 +1,29 @@
 {
   "name": "algo",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "JavaScript Algorithms",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "doc": "jsdoc -c jsdoc.json",
+    "lint": "eslint . --fix && prettier --write \"**/*.js\" \"**/*.json\"",
+    "test": "npm run -s lint && node test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["algorithms", "jsdoc"],
+  "author": "Maksym Pozhydaiev <pogidaevmo@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com"
+  },
+  "bugs": {
+    "url": "https://github.com/"
+  },
+  "homepage": "https://github.com/",
+  "engines": {
+    "node": "14 || 16"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "jsdoc": "^4.0.0",
+    "prettier": "^2.8.4"
+  }
 }
