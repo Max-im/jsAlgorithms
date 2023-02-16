@@ -147,7 +147,14 @@ const LinkedList = require('../LinkedList');
 
 {
   const linkedList = new LinkedList();
-  linkedList.append(1).append(2).append(3).append(1).append(2).append(3).delete(1);
+  linkedList
+    .append(1)
+    .append(2)
+    .append(3)
+    .append(1)
+    .append(2)
+    .append(3)
+    .delete(1);
   const expected = [2, 3, 2, 3];
   let i = 0;
   for (const element of linkedList) {
@@ -158,7 +165,14 @@ const LinkedList = require('../LinkedList');
 
 {
   const linkedList = new LinkedList();
-  linkedList.append(1).append(2).append(3).append(1).append(2).append(3).delete(2);
+  linkedList
+    .append(1)
+    .append(2)
+    .append(3)
+    .append(1)
+    .append(2)
+    .append(3)
+    .delete(2);
   const expected = [1, 3, 1, 3];
   let i = 0;
   for (const element of linkedList) {
@@ -169,7 +183,14 @@ const LinkedList = require('../LinkedList');
 
 {
   const linkedList = new LinkedList();
-  linkedList.append(1).append(2).append(3).append(1).append(2).append(3).delete(3);
+  linkedList
+    .append(1)
+    .append(2)
+    .append(3)
+    .append(1)
+    .append(2)
+    .append(3)
+    .delete(3);
   const expected = [1, 2, 1, 2];
   let i = 0;
   for (const element of linkedList) {
