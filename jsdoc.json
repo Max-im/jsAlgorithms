@@ -1,14 +1,10 @@
 {
   "source": {
-    "include": [
-      "algorithms"
-    ],
+    "include": ["algorithms"],
     "includePattern": ".js$",
     "excludePattern": "(node_modules/|docs|test)"
   },
-  "plugins": [
-    "plugins/markdown"
-  ],
+  "plugins": ["plugins/markdown"],
   "templates": {
     "cleverLinks": true,
     "monospaceLinks": true
