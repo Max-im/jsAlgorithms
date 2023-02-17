@@ -8,6 +8,7 @@ The principal benefit of a linked list over a conventional array is that the lis
 
 On the other hand, since simple linked lists by themselves do not allow random access to the data or any form of efficient indexing, many basic operations—such as obtaining the last node of the list, finding a node that contains a given datum, or locating the place where a new node should be inserted—may require iterating through most or all of the list elements.
 
+[Home](/)
 
 ## References
 
