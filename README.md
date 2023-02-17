@@ -4,5 +4,4 @@
 
 - `D` [Linked List](algorithms/dataStructures/linkedList)
 - `D` [Queue](algorithms/dataStructures/queue)
-- `D` Stack
-- `D` Tree
+- `D` [Stack](algorithms/dataStructures/stack)
