@@ -1,13 +1,13 @@
 {
-  "name": "algo",
+  "name": "algorithms",
   "version": "1.0.0",
-  "description": "JavaScript Algorithms",
+  "description": "Algorithms and Data Structures implemented on JavaScript",
   "scripts": {
     "doc": "jsdoc -c jsdoc.json",
     "lint": "eslint . --fix && prettier --write \"**/*.js\" \"**/*.json\"",
     "test": "npm run -s lint && node test"
   },
-  "keywords": ["algorithms", "jsdoc"],
+  "keywords": ["algorithms", "data-structures"],
   "author": "Maksym Pozhydaiev <pogidaevmo@gmail.com>",
   "license": "ISC",
   "repository": {
