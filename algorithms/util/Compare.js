@@ -1,10 +1,5 @@
 'use strict';
 
-/**
- * @abstract
- * @class Compare
- *
- */
 class Compare {
   /**
    *

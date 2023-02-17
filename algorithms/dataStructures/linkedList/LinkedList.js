@@ -3,7 +3,6 @@
 const LinkedListNode = require('./LinkedListNode');
 const Compare = require('../../util/Compare');
 
-/** @class */
 class LinkedList extends Compare {
   constructor() {
     super();
