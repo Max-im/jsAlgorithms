@@ -14,7 +14,6 @@ list
   .append({ name: 'third' })
   .delete({ name: 'third' });
 
-
 const found = list.find({ value: { name: 'second' } });
 console.log({ found });
 
