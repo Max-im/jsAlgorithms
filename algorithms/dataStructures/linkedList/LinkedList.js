@@ -42,6 +42,35 @@ class LinkedList extends Compare {
   }
 
   /**
+   * Search
+   * @param {Object} options - options object
+   * @param {*} options.value - payload
+   * @param {function} options.callback - callback function
+   * @return {LinkedList | null}
+   */
+  find(options) {
+    if (!this.head) return null;
+
+    const callback = options.callback;
+    const value = options.value;
+    let currentNode = this.head;
+
+    while (currentNode) {
+      if (callback && callback(currentNode.value)) {
+        return currentNode;
+      }
+
+      if (value !== undefined && this.isEqual(currentNode.value, value)) {
+        return currentNode;
+      }
+
+      currentNode = currentNode.next;
+    }
+
+    return null;
+  }
+
+  /**
    * Delete all elements of the list by passed value
    * @param {*} value
    * @return {LinkedList}

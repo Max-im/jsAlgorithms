@@ -85,6 +85,26 @@ const LinkedList = require('../LinkedList');
   assert.equal(linkedList.tail.next, null);
 }
 
+// find
+{
+  const linkedList = new LinkedList();
+  assert.equal(typeof linkedList.find, 'function');
+}
+
+{
+  const linkedList = new LinkedList();
+  linkedList.append(1).append(2).append(3).append(4).append(5);
+  assert.equal(linkedList.find({ value: 10 }), null);
+  assert.equal(linkedList.find({ value: 3 }).value, 3);
+}
+
+{
+  const linkedList = new LinkedList();
+  linkedList.append(1).append(2).append(3).append(4).append(5);
+  assert.equal(linkedList.find({ callback: (val) => val === 10 }), null);
+  assert.equal(linkedList.find({ callback: (val) => val === 3 }).value, 3);
+}
+
 // deleteTail
 {
   const linkedList = new LinkedList();
