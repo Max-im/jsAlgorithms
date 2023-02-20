@@ -1,6 +1,20 @@
 'use strict';
 
-require('../algorithms/dataStructures/linkedList/__test__/LinkedListNode.test');
-require('../algorithms/dataStructures/linkedList/__test__/LinkedList.test');
-require('../algorithms/dataStructures/queue/__test__/Queue.test');
-require('../algorithms/dataStructures/stack/__test__/Stack.test');
+const fs = require('fs');
+const path = require('path');
+
+const read = (dirPath) => {
+  const files = fs.readdirSync(dirPath);
+
+  files.forEach((name) => {
+    const fullPath = path.join(dirPath, name);
+
+    if (fs.lstatSync(fullPath).isDirectory()) {
+      read(fullPath);
+    } else if (name.match(/^.*\.test\.js$/)) {
+      require(fullPath);
+    }
+  });
+};
+
+read(path.join(__dirname, '../algorithms'));
