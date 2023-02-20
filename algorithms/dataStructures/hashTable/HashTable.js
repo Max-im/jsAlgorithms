@@ -17,7 +17,7 @@ class HashTable {
   /**
    * @param {string} key
    * @param {*} value
-   * @returns {void}
+   * @return {void}
    */
   add(key, value) {
     const keyHash = this._hash(key);
