@@ -1,4 +1,4 @@
-# LinkedList
+# Linked List
 
 [Home](https://github.com/Max-im/jsAlgorithms)
 
