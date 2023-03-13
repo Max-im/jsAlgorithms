@@ -1,7 +1,6 @@
 # Linked List
 
 [Home](https://github.com/Max-im/jsAlgorithms)
-[Home2](/)
 
 A linked list is a linear data structure that consists of a sequence of nodes, where each node contains a value and a reference (or pointer) to the next node in the sequence. The first node in the sequence is called the head of the list.
 
